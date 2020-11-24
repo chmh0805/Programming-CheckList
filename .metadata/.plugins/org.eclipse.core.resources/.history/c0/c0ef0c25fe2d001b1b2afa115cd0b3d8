@@ -1,0 +1,17 @@
+package swing;
+
+import java.awt.Container;
+
+import javax.swing.*;
+
+public class SmsMethod extends JFrame {
+	public SmsMethod() {
+		Container c = new Container();
+		JLabel la1 = new JLabel();
+		JButton btn1 = new JButton();
+	}
+	
+	public static void main(String[] args) {
+		new SmsMethod();
+	}
+}

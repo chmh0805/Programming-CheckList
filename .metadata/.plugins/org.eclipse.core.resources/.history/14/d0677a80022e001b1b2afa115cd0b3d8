@@ -1,0 +1,79 @@
+package swing;
+
+import java.awt.Container;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class SmsApp extends JFrame {
+	private JLabel laPhone, laText;
+	private JTextField tfPhone, tfText;
+	private JButton btnSend, btnReset;
+	private Container c;
+	private GridLayout grid;
+	
+	private void initObject() {
+		laPhone = new JLabel("전화번호");
+		laText = new JLabel("메시지");
+		tfPhone = new JTextField("");
+		tfText = new JTextField("");
+		btnSend = new JButton("전송");
+		btnReset = new JButton("초기화");
+		c = getContentPane();
+		grid = new GridLayout(3, 2);
+	}
+	
+	private void initSetting() {
+		grid.setVgap(5);
+		c.setLayout(grid);
+		
+		setSize(400, 200);
+		setTitle("SMS발송 App");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+	
+	private void initBatch() {
+		c.add(laPhone);
+		c.add(tfPhone);
+		c.add(laText);
+		c.add(tfText);
+		c.add(btnSend);
+		c.add(btnReset);
+	}
+	
+	public SmsApp() {
+		initObject();
+		
+		initSetting();
+		
+		initBatch();
+		
+		btnSend.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String to = tfPhone.getText();
+				String text = tfText.getText();
+				SmsMethod.
+			}
+		});
+		
+		btnReset.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				tfPhone.setText("");
+				tfText.setText("");
+			}
+		});
+		
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		new SmsApp();
+	}
+}

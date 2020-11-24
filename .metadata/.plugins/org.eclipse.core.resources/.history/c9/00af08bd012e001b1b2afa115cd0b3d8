@@ -1,0 +1,39 @@
+package swing;
+
+import java.awt.Container;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class SmsApp extends JFrame {
+	private JLabel laPhone, laText;
+	private JTextField tfPhone, tfText;
+	private JButton btnSend, btnReset;
+	private Container c;
+	private GridLayout grid;
+	
+	private void initObject() {
+		laPhone = new JLabel("전화번호");
+		laText = new JLabel("메시지");
+		tfPhone = new JTextField("");
+		tfText = new JTextField("");
+		btnSend = new JButton("전송");
+		btnReset = new JButton("초기화");
+		c = getContentPane();
+		grid = new GridLayout(3, 2);
+	}
+	
+	public SmsApp() {
+		initObject();
+		
+		
+		setVisible(true);
+	}
+
+	public static void main(String[] args) {
+		
+	}
+}

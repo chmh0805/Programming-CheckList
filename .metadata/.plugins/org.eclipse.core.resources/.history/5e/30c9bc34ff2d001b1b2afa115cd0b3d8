@@ -1,0 +1,44 @@
+package swing;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+
+public class SmsMethod extends JFrameme {
+	public SmsMethod() {
+		Container c = new Container();
+		JPanel jp1 = new JPanel();
+		JLabel la1 = new JLabel("내용 11");
+		JButton btn1 = new JButton("버튼");
+		
+		c.add(jp1, BorderLayout.CENTER);
+		jp1.add(la1);
+		jp1.add(btn1);
+		
+		setSize(300, 300);
+		setTitle("Test");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		btn1.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				la1.setText("내용 22");
+				
+			}
+		});
+		
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new SmsMethod();
+	}
+}

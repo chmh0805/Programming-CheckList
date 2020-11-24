@@ -1,0 +1,17 @@
+package swing;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
+public class SmsApp extends JFrame {
+	private JLabel laPhone, laText;
+	private JTextField tfPhone, tfText;
+	private JButton btnSend, btnReset;
+	
+
+	public static void main(String[] args) {
+		
+	}
+}
